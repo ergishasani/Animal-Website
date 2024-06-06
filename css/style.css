@@ -1,9 +1,12 @@
 /* CSS styles for Animal Facts website */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 :root {
     --cream: #FFF2D7;
     --font_color: #D8AE7E;
     --bck_color: #FFE0B5;
-    --links_size: 2rem;
+    --links_size: 3rem;
+    --font_fam: "Caveat", cursive;
 }
 
 * {
@@ -31,7 +34,7 @@ header {
 .links {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 65%;
     justify-content: space-around;
     list-style: none;
 }
@@ -40,7 +43,8 @@ header {
     text-decoration: none;
     color: var(--font_color);
     font-size: var(--links_size);
-
+    font-family: var(--font_fam);
+    font-weight: bold;
 }
 
 header a img {
