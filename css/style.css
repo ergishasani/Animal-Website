@@ -65,11 +65,15 @@ header a img {
     height: 100vh;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--bck_color);
+    background: linear-gradient(to bottom, var(--bck_color) 10%, #fff 100%);
 }
 
 .container {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 }
 
 .container h1 {
@@ -80,4 +84,24 @@ header a img {
 .container p {
     font-family: var(--secondary_font);
     font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container a {
+    font-size: 2rem;
+    text-decoration: none;
+    width: 15rem;
+    height: 4rem;
+    border: 0.5rem solid #D8AE7E;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    color: var(--font_color);
+}
+
+.container a:hover {
+    background-color: var(--cream);
 }
