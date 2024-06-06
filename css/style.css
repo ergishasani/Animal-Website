@@ -1,5 +1,10 @@
 /* CSS styles for Animal Facts website */
-:root {}
+:root {
+    --cream: #FFF2D7;
+    --font_color: #D8AE7E;
+    --bck_color: #FFE0B5;
+    --links_size: 2rem;
+}
 
 * {
     margin: 0;
@@ -20,15 +25,30 @@ header {
     align-items: center;
     width: 100%;
     height: 8rem;
+    background-color: var(--cream);
 }
 
 .links {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 60%;
     justify-content: space-around;
+    list-style: none;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--font_color);
+    font-size: var(--links_size);
+
 }
 
 header a img {
     width: 5rem;
+}
+
+/* Body */
+
+body {
+    background-color: var(--bck_color);
 }
