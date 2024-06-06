@@ -1,5 +1,6 @@
 /* CSS styles for Animal Facts website */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
 
 :root {
     --cream: #FFF2D7;
@@ -7,6 +8,8 @@
     --bck_color: #FFE0B5;
     --links_size: 3rem;
     --font_fam: "Caveat", cursive;
+    --secondary_font: "Roboto Slab", serif;
+    ;
 }
 
 * {
@@ -29,6 +32,8 @@ header {
     width: 100%;
     height: 8rem;
     background-color: var(--cream);
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .links {
@@ -51,8 +56,28 @@ header a img {
     width: 5rem;
 }
 
-/* Body */
+/* Hero */
 
-body {
+.hero {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--bck_color);
+}
+
+.container {
+    width: 30%;
+}
+
+.container h1 {
+    font-size: 7rem;
+    font-family: var(--font_fam);
+}
+
+.container p {
+    font-family: var(--secondary_font);
+    font-size: 2rem;
 }
