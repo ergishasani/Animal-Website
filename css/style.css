@@ -9,7 +9,6 @@
     --links_size: 3rem;
     --font_fam: "Caveat", cursive;
     --secondary_font: "Roboto Slab", serif;
-    ;
 }
 
 * {
@@ -27,21 +26,32 @@ html {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 8rem;
     background-color: var(--cream);
     position: fixed;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem;
+    z-index: 1000;
+}
+
+header a img {
+    width: 5rem;
+}
+
+nav {
+    display: flex;
+    width: 60%;
 }
 
 .links {
     display: flex;
     flex-direction: row;
-    width: 65%;
-    justify-content: space-around;
     list-style: none;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .link a {
@@ -50,10 +60,57 @@ header {
     font-size: var(--links_size);
     font-family: var(--font_fam);
     font-weight: bold;
+    margin: 0 1rem;
 }
 
-header a img {
-    width: 5rem;
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.5rem;
+}
+
+.burger div {
+    width: 2.5rem;
+    height: 0.3rem;
+    background-color: var(--font_color);
+    transition: all 0.3s linear;
+}
+
+nav.active .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    background-color: var(--cream);
+    height: calc(100vh - 8rem);
+    justify-content: center;
+}
+
+nav.active .burger .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+nav.active .burger .line2 {
+    opacity: 0;
+}
+
+nav.active .burger .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
 }
 
 /* Hero */
@@ -66,6 +123,12 @@ header a img {
     justify-content: space-around;
     align-items: center;
     background: linear-gradient(to bottom, var(--bck_color) 10%, #fff 100%);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-width: 50%;
 }
 
 .container {
@@ -104,4 +167,35 @@ header a img {
 
 .container a:hover {
     background-color: var(--cream);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .container h1 {
+        font-size: 5rem;
+    }
+
+    .container p {
+        font-size: 1.5rem;
+    }
+
+    .container a {
+        font-size: 1.5rem;
+        width: 12rem;
+        height: 3.5rem;
+    }
 }
