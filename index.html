@@ -7,18 +7,97 @@
     <title>Animal Facts</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<header>
+    <a href="index.html"><img src="images/logo.png" alt="Animal Facts"></a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animal-profiles/lion.html">Animal Profiles</a></li>
+        <li><a href="quizzes/quiz1.html">Quizzes</a></li>
+        <li><a href="conservation/project1.html">Conservation Tips</a></li>
+        <li><a href="blog/post1.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</header>
 
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <!-- Featured Image/Video -->
+        <img src="images/hero/hero-image1.jpg" alt="Featured Animal">
+        <!-- Welcome Message -->
+        <div class="container">
             <h1>Welcome to Animal Facts!</h1>
-            <p>Explore the wonders of the animal kingdom with us. Discover fascinating facts about animals from around the world.</p>
-            <a href="#featured-animal" class="cta-button">Discover More</a>
+            <p>Explore the wonders of the animal kingdom with us.</p>
+            <!-- Call-to-Action Button -->
+            <a href="animal-profiles/lion.html" class="cta-button">Discover More</a>
         </div>
     </section>
 
-    <script src="/js/main.js"></script>
+    <!-- Featured Sections (Animal of the Week, Quick Links) -->
+    <section class="featured-sections">
+        <!-- Animal of the Week -->
+        <div class="container">
+            <h2>Animal of the Week</h2>
+            <!-- Featured Animal Card -->
+            <div class="animal-card">
+                <img src="images/animals/animal1.jpg" alt="Featured Animal">
+                <h3>Lion</h3>
+                <p>A majestic creature known as the king of the jungle.</p>
+                <a href="animal-profiles/lion.html" class="cta-button">Learn More</a>
+            </div>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="quick-links">
+            <div class="container">
+                <h2>Quick Links</h2>
+                <!-- Links to Popular Sections -->
+                <a href="quizzes/quiz1.html">Interactive Quizzes</a>
+                <a href="conservation/project1.html">Conservation Tips</a>
+                <a href="blog/post1.html">Latest Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts/News Section -->
+    <section class="latest-posts">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <!-- Blog Post Teasers -->
+            <div class="blog-teaser">
+                <img src="images/blog/post1-thumbnail.jpg" alt="Blog Post Thumbnail">
+                <h3>Exploring the Rainforests: A Wildlife Adventure</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <a href="blog/post1.html" class="read-more">Read More</a>
+            </div>
+            <!-- Repeat the above structure for additional blog posts -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <!-- Social Media Icons -->
+            <ul class="social-icons">
+                <li><a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+            <!-- Newsletter Signup Form -->
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p>Contact Us: info@animalfacts.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
+
 
 </html>
