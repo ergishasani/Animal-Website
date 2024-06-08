@@ -209,11 +209,13 @@ p {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 5rem 2rem;
-    background-color: var(--bck_color);
+    height: 50vh;
+    background: linear-gradient(to top, #fff2d7 10%, #fff 100%);
+
 }
 
-.animal-card, .quick-links {
+.animal-card,
+.quick-links {
     flex: 1;
     margin: 0 2rem;
 }
